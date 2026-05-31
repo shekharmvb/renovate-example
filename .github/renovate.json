@@ -1,0 +1,20 @@
+{
+  "extends": ["config:base"],
+
+  "dependencyDashboard": true,
+
+  "labels": ["renovate"],
+
+  "rangeStrategy": "bump",
+
+  "packageRules": [
+    {
+      "matchManagers": ["dockerfile"],
+      "pinDigests": true
+    },
+    {
+      "matchManagers": ["maven"],
+      "groupName": "maven dependencies"
+    }
+  ]
+}
